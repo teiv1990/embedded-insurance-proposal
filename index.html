@@ -13,9 +13,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome 6 Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         /* ==========================================
@@ -155,7 +152,7 @@
             border-color: #fde68a;
         }
 
-        /* EXQUISITE BUTTON TYPOGRAPHY & STYLES */
+        /* EXQUISITE BUTTON STYLES */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -175,9 +172,9 @@
             line-height: 1;
         }
 
-        .btn i {
-            font-size: 1rem;
+        .btn svg {
             transition: var(--transition);
+            flex-shrink: 0;
         }
 
         .btn-primary {
@@ -189,9 +186,6 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(37, 99, 235, 0.38);
             text-decoration: none;
-        }
-        .btn-primary:hover i {
-            transform: translateY(-1px);
         }
 
         .btn-outline {
@@ -255,9 +249,9 @@
             color: var(--text-heading);
         }
 
-        .brand-logo i {
+        .brand-logo svg {
             color: var(--primary-light);
-            font-size: 1.35rem;
+            flex-shrink: 0;
         }
 
         .nav-actions {
@@ -525,7 +519,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.15rem;
             flex-shrink: 0;
         }
 
@@ -551,7 +544,7 @@
             font-weight: 600;
         }
 
-        /* REFINED DUTY LIST WITH OUTLINE ICONS */
+        /* DUTY LIST WITH OUTLINE SVG ICONS */
         .duty-list {
             list-style: none;
             display: flex;
@@ -568,10 +561,9 @@
             line-height: 1.55;
         }
 
-        .duty-list li i.fa-regular {
+        .duty-list li svg {
             color: var(--accent-emerald);
             margin-top: 3px;
-            font-size: 0.95rem;
             flex-shrink: 0;
         }
 
@@ -829,11 +821,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.15rem;
             margin-bottom: 14px;
         }
 
-        /* BEAUTIFULLY FORMATTED STRATEGIC RECOMMENDATIONS SECTION */
+        /* STRATEGIC RECOMMENDATIONS CARDS */
         .rec-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -870,13 +861,13 @@
             font-size: 1.02rem;
         }
 
-        .rec-header i {
-            font-size: 1.1rem;
+        .rec-header svg {
             color: var(--primary-light);
+            flex-shrink: 0;
         }
 
-        .rec-card.gold .rec-header i { color: var(--accent-gold); }
-        .rec-card.emerald .rec-header i { color: var(--accent-emerald); }
+        .rec-card.gold .rec-header svg { color: var(--accent-gold); }
+        .rec-card.emerald .rec-header svg { color: var(--accent-emerald); }
 
         .rec-body {
             font-size: 0.93rem;
@@ -979,13 +970,13 @@
     <header class="sticky-nav">
         <div class="nav-container">
             <div class="brand-logo">
-                <i class="fa-regular fa-shield-halved"></i>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 <span>BẢO HIỂM NHÚNG NGÂN HÀNG</span>
             </div>
 
             <div class="nav-actions">
                 <button class="btn btn-outline" onclick="window.print()" title="In đề án hoặc xuất PDF">
-                    <i class="fa-regular fa-file-pdf"></i>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
                     <span>In / PDF</span>
                 </button>
             </div>
@@ -1036,7 +1027,10 @@
             <!-- HERO EXECUTIVE SUMMARY -->
             <div class="hero-banner">
                 <div class="hero-header">
-                    <div class="badge" style="background: rgba(255,255,255,0.1); color: #60a5fa; border-color: rgba(255,255,255,0.2);"><i class="fa-regular fa-lightbulb"></i> ĐỀ ÁN CHIẾN LƯỢC INSURTECH</div>
+                    <div class="badge" style="background: rgba(255,255,255,0.1); color: #60a5fa; border-color: rgba(255,255,255,0.2);">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1.3.5 2.6 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+                        <span>ĐỀ ÁN CHIẾN LƯỢC INSURTECH</span>
+                    </div>
                     <h1>Đề Án Triển Khai Sản Phẩm Bảo Hiểm Nhúng Vào Ngân Hàng</h1>
                     <p class="subtitle">Tích hợp trực tiếp dịch vụ bảo hiểm vào điểm chạm sẵn có của Ngân hàng (Tài khoản, Khoản vay, Thẻ, Giao dịch số) - Tận dụng dữ liệu, tệp khách hàng và xây dựng hệ thống phân phối có khả năng nhân rộng.</p>
                 </div>
@@ -1074,17 +1068,26 @@
                     
                     <div class="grid-2" style="margin-top: 20px;">
                         <div class="glass-card" style="background: var(--bg-card-subtle);">
-                            <h4 style="color: var(--primary-light); margin-bottom: 8px;"><i class="fa-regular fa-share-nodes"></i> Mở Rộng Quy Mô Phân Phối</h4>
+                            <h4 style="color: var(--primary-light); margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                                Mở Rộng Quy Mô Phân Phối
+                            </h4>
                             <p style="font-size: 0.93rem; margin-bottom: 0;">Tạo ra mô hình phân phối bảo hiểm có khả năng mở rộng nhanh chóng, tận dụng tối đa tệp khách hàng, cơ sở dữ liệu định danh (KYC) và luồng giao dịch tài chính tự động của ngân hàng đối tác.</p>
                         </div>
                         <div class="glass-card" style="background: var(--bg-card-subtle);">
-                            <h4 style="color: var(--accent-emerald); margin-bottom: 8px;"><i class="fa-regular fa-microchip"></i> Năng Lực Công Nghệ & Nghiệp Vụ</h4>
+                            <h4 style="color: var(--accent-emerald); margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg>
+                                Năng Lực Công Nghệ & Nghiệp Vụ
+                            </h4>
                             <p style="font-size: 0.93rem; margin-bottom: 0;">Xây dựng hệ thống công nghệ kết nối API linh hoạt và quy trình nghiệp vụ TPA đủ năng lực để sẵn sàng triển khai hạ tầng đồng thời với nhiều đối tác ngân hàng & công ty bảo hiểm trong tương lai.</p>
                         </div>
                     </div>
 
                     <div class="callout-box gold">
-                        <h4><i class="fa-regular fa-handshake"></i> Vai Trò Trọng Yếu Của Cổ Đông Lớn</h4>
+                        <h4>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l4.3-4.3a2 2 0 0 0 0-2.8l-3.2-3.2a2 2 0 0 0-2.8 0L9 11"/><path d="m14 14-2.5 2.5a1 1 0 0 1-1.4 0l-4.3-4.3a2 2 0 0 1 0-2.8l3.2-3.2a2 2 0 0 1 2.8 0L14 8"/></svg>
+                            Vai Trò Trọng Yếu Của Cổ Đông Lớn
+                        </h4>
                         <p style="margin-bottom: 0;">Dự án cần sự tham gia của cổ đông lớn với vai trò chiến lược trong việc hỗ trợ uy tín thương hiệu, mở rộng quan hệ đối tác tài chính và củng cố năng lực triển khai thực tế khi đàm phán hợp tác.</p>
                     </div>
                 </div>
@@ -1099,7 +1102,9 @@
 
                 <div class="grid-3">
                     <div class="glass-card" style="text-align: center; background: var(--primary-subtle); border-color: var(--border-highlight);">
-                        <div class="team-icon" style="margin: 0 auto 14px;"><i class="fa-regular fa-id-badge"></i></div>
+                        <div class="team-icon" style="margin: 0 auto 14px;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
                         <h3 style="margin-bottom: 6px;">Ban Điều Hành</h3>
                         <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">Điều hành trực tiếp toàn bộ dự án</p>
                         <div class="team-members" style="justify-content: center;">
@@ -1108,7 +1113,9 @@
                     </div>
 
                     <div class="glass-card" style="text-align: center; background: var(--accent-emerald-light); border-color: #a7f3d0;">
-                        <div class="team-icon" style="margin: 0 auto 14px; background: #ffffff; color: var(--accent-emerald);"><i class="fa-regular fa-folder-closed"></i></div>
+                        <div class="team-icon" style="margin: 0 auto 14px; background: #ffffff; color: var(--accent-emerald);">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        </div>
                         <h3 style="margin-bottom: 6px;">Bộ Phận Nghiệp Vụ</h3>
                         <p style="font-size: 0.88rem; color: #047857; margin-bottom: 12px;">R&D, Quy trình, TPA & Bồi thường</p>
                         <div class="team-members" style="justify-content: center;">
@@ -1119,7 +1126,9 @@
                     </div>
 
                     <div class="glass-card" style="text-align: center; background: var(--accent-gold-light); border-color: #fde68a;">
-                        <div class="team-icon" style="margin: 0 auto 14px; background: #ffffff; color: var(--accent-gold);"><i class="fa-regular fa-handshake"></i></div>
+                        <div class="team-icon" style="margin: 0 auto 14px; background: #ffffff; color: var(--accent-gold);">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M9 9h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
+                        </div>
                         <h3 style="margin-bottom: 6px;">Quan Hệ KH / Đối Tác</h3>
                         <p style="font-size: 0.88rem; color: #b45309; margin-bottom: 12px;">Phát triển đối tác & Thương mại hóa</p>
                         <div class="team-members" style="justify-content: center;">
@@ -1140,7 +1149,9 @@
                     <!-- Ban điều hành -->
                     <div class="glass-card team-card">
                         <div class="team-card-header">
-                            <div class="team-icon"><i class="fa-regular fa-user"></i></div>
+                            <div class="team-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
                             <div class="team-title">
                                 <h3>Ban Điều Hành</h3>
                                 <div class="team-members">
@@ -1149,19 +1160,21 @@
                             </div>
                         </div>
                         <ul class="duty-list">
-                            <li><i class="fa-regular fa-circle-check"></i> Vận hành chung toàn bộ công ty.</li>
-                            <li><i class="fa-regular fa-circle-check"></i> Quản trị & phát triển công nghệ.</li>
-                            <li><i class="fa-regular fa-circle-check"></i> Tiếp thị & Marketing sản phẩm.</li>
-                            <li><i class="fa-regular fa-circle-check"></i> Kế toán & đối soát doanh thu.</li>
-                            <li><i class="fa-regular fa-circle-check"></i> Quản lý tiến độ triển khai sản phẩm.</li>
-                            <li><i class="fa-regular fa-circle-check"></i> Làm việc trực tiếp với đối tác chiến lược.</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Vận hành chung toàn bộ công ty.</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Quản trị & phát triển công nghệ.</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Tiếp thị & Marketing sản phẩm.</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Kế toán & đối soát doanh thu.</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Quản lý tiến độ triển khai sản phẩm.</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Làm việc trực tiếp với đối tác chiến lược.</li>
                         </ul>
                     </div>
 
                     <!-- Bộ phận nghiệp vụ -->
                     <div class="glass-card team-card">
                         <div class="team-card-header">
-                            <div class="team-icon" style="background: var(--accent-emerald-light); color: var(--accent-emerald);"><i class="fa-regular fa-clipboard"></i></div>
+                            <div class="team-icon" style="background: var(--accent-emerald-light); color: var(--accent-emerald);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                            </div>
                             <div class="team-title">
                                 <h3>Bộ Phận Nghiệp Vụ</h3>
                                 <div class="team-members">
@@ -1170,19 +1183,21 @@
                             </div>
                         </div>
                         <ul class="duty-list">
-                            <li><i class="fa-regular fa-circle-check"></i> Trực tiếp vận hành TPA & bồi thường.</li>
-                            <li><i class="fa-regular fa-circle-check"></i> Các nhiệm vụ khác liên quan đến vận hành sản phẩm bảo hiểm.</li>
-                            <li><i class="fa-regular fa-circle-check"></i> Làm việc với CTY bảo hiểm về thiết kế SP.</li>
-                            <li><i class="fa-regular fa-circle-check"></i> R&D nghiên cứu phát triển sản phẩm.</li>
-                            <li><i class="fa-regular fa-circle-check"></i> Xây dựng quy trình nghiệp vụ bảo hiểm.</li>
-                            <li><i class="fa-regular fa-circle-check"></i> Theo dõi & hỗ trợ xử lý các vấn đề phát sinh liên quan đến sản phẩm.</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Trực tiếp vận hành TPA & bồi thường.</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Các nhiệm vụ khác liên quan đến vận hành sản phẩm bảo hiểm.</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Làm việc với CTY bảo hiểm về thiết kế SP.</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> R&D nghiên cứu phát triển sản phẩm.</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Xây dựng quy trình nghiệp vụ bảo hiểm.</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Theo dõi & hỗ trợ xử lý các vấn đề phát sinh liên quan đến sản phẩm.</li>
                         </ul>
                     </div>
 
                     <!-- Bộ phận đối tác -->
                     <div class="glass-card team-card">
                         <div class="team-card-header">
-                            <div class="team-icon" style="background: var(--accent-gold-light); color: var(--accent-gold);"><i class="fa-regular fa-building-columns"></i></div>
+                            <div class="team-icon" style="background: var(--accent-gold-light); color: var(--accent-gold);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M9 9h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
+                            </div>
                             <div class="team-title">
                                 <h3>Quan Hệ KH / Đối Tác</h3>
                                 <div class="team-members">
@@ -1191,10 +1206,10 @@
                             </div>
                         </div>
                         <ul class="duty-list">
-                            <li><i class="fa-regular fa-circle-check"></i> Tìm kiếm & phát triển đối tác mới.</li>
-                            <li><i class="fa-regular fa-circle-check"></i> Duy trì quan hệ bền vững với Ngân hàng & Công ty bảo hiểm.</li>
-                            <li><i class="fa-regular fa-circle-check"></i> Hỗ trợ đàm phán & triển khai hợp tác.</li>
-                            <li><i class="fa-regular fa-circle-check"></i> Phối hợp cùng Ban điều hành thúc đẩy tiến độ thương mại hóa.</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Tìm kiếm & phát triển đối tác mới.</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Duy trì quan hệ bền vững với Ngân hàng & Công ty bảo hiểm.</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Hỗ trợ đàm phán & triển khai hợp tác.</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Phối hợp cùng Ban điều hành thúc đẩy tiến độ thương mại hóa.</li>
                         </ul>
                     </div>
                 </div>
@@ -1212,22 +1227,30 @@
 
                     <div class="grid-2" style="margin-top: 20px;">
                         <div class="product-card">
-                            <div class="product-icon"><i class="fa-regular fa-star"></i></div>
+                            <div class="product-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
                             <h4>Bảo Chứng Uy Tín Thương Hiệu</h4>
                             <p style="font-size: 0.9rem; color: var(--text-muted); margin: 6px 0 0 0;">Hỗ trợ vị thế và uy tín cho công ty trong quá trình làm việc và thiết lập quan hệ với lãnh đạo cấp cao ngân hàng và công ty bảo hiểm.</p>
                         </div>
                         <div class="product-card">
-                            <div class="product-icon" style="color: var(--accent-emerald); background: var(--accent-emerald-light);"><i class="fa-regular fa-share-nodes"></i></div>
+                            <div class="product-icon" style="color: var(--accent-emerald); background: var(--accent-emerald-light);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                            </div>
                             <h4>Kết Nối Đối Tác Chiến Lược</h4>
                             <p style="font-size: 0.9rem; color: var(--text-muted); margin: 6px 0 0 0;">Mở rộng mạng lưới quan hệ, giới thiệu các cơ hội hợp tác kinh doanh tiềm năng trong hệ sinh thái tài chính rộng lớn.</p>
                         </div>
                         <div class="product-card">
-                            <div class="product-icon" style="color: var(--accent-gold); background: var(--accent-gold-light);"><i class="fa-regular fa-compass"></i></div>
+                            <div class="product-icon" style="color: var(--accent-gold); background: var(--accent-gold-light);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                            </div>
                             <h4>Cố Vấn Định Hướng Quyết Định</h4>
                             <p style="font-size: 0.9rem; color: var(--text-muted); margin: 6px 0 0 0;">Tham gia góp ý ở các quyết định quan trọng liên quan đến mô hình hợp tác, cấu trúc sản phẩm và phương án kinh doanh.</p>
                         </div>
                         <div class="product-card">
-                            <div class="product-icon" style="color: var(--accent-cyan); background: #e0f2fe;"><i class="fa-regular fa-shield-halved"></i></div>
+                            <div class="product-icon" style="color: var(--accent-cyan); background: #e0f2fe;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
                             <h4>Gia Tăng Niềm Tin Cho Các Bên</h4>
                             <p style="font-size: 0.9rem; color: var(--text-muted); margin: 6px 0 0 0;">Tạo nền tảng tài chính chắc chắn và niềm tin vững chắc cho đối tác trong suốt quá trình triển khai dự án dài hạn.</p>
                         </div>
@@ -1279,7 +1302,10 @@
                     </div>
 
                     <div class="callout-box">
-                        <h4><i class="fa-regular fa-paper-plane"></i> Lộ Trình Phát Triển Mô Hình Kinh Doanh</h4>
+                        <h4>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.71 1.26-1.5 1.77-2.31 1.45-2.34 2.87-4.66 4.73-6.69A27.08 27.08 0 0 1 22 2s-6.55 7.96-8.5 10c-2.03 2.12-4.35 3.54-6.69 4.99-.81.51-1.6 1.06-2.31 1.77z"/><path d="M15 9l-3 3"/><path d="M9 15l-3 3"/></svg>
+                            Lộ Trình Phát Triển Mô Hình Kinh Doanh
+                        </h4>
                         <p style="margin-bottom: 0;"><strong>Giai đoạn đầu:</strong> Tập trung nguồn lực xây dựng hệ thống cốt lõi, phát triển sản phẩm mẫu và thử nghiệm thành công với ngân hàng đối tác đầu tiên.<br><strong>Giai đoạn nhân rộng:</strong> Khi mô hình chứng minh hiệu quả tài chính và vận hành, công ty sẽ mở rộng nhân rộng sang nhiều ngân hàng, công ty bảo hiểm và các tổ chức tài chính khác.</p>
                     </div>
                 </div>
@@ -1295,7 +1321,10 @@
                 <div class="glass-card">
                     <p style="font-size: 1.02rem;">Một trong các điểm đối tác lớn đang quan ngại là <strong>tỷ lệ chuyển đổi 30%</strong>. Qua nghiên cứu & tham chiếu các Case Study uy tín trên thế giới, con số 30% hoàn toàn có cơ sở khoa học nhưng cần đặt đúng trong ngữ cảnh hạ tầng nhúng tối ưu.</p>
 
-                    <h3 style="margin: 24px 0 16px 0;"><i class="fa-regular fa-chart-bar"></i> Bảng Dẫn Chứng Case Study Quốc Tế</h3>
+                    <h3 style="margin: 24px 0 16px 0; display: flex; align-items: center; gap: 8px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        Bảng Dẫn Chứng Case Study Quốc Tế
+                    </h3>
 
                     <div class="grid-2">
                         <!-- Case 1 -->
@@ -1309,7 +1338,8 @@
                                 <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 8px;">Tận dụng KYC, dữ liệu khách hàng, tài khoản thanh toán và chiến dịch SMS/Push. Đạt <strong>29% conversion rate</strong> trên tập người dùng đăng ký app.</p>
                             </div>
                             <a href="https://bolttech.io/case-studies/taiwan-mobile-case-study/" target="_blank" rel="noopener" class="case-link-btn">
-                                <span>Xem báo cáo gốc bolttech</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <span>Xem báo cáo gốc bolttech</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </div>
 
@@ -1324,7 +1354,8 @@
                                 <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 8px;">Nhúng trực tiếp vào luồng thanh toán Checkout online/in-app. Qover công bố conversion rate vượt <strong>50%</strong> khi gợi ý đúng điểm chạm (so với 5% nếu redirect ra ngoài).</p>
                             </div>
                             <a href="https://www.qover.com/blog/e-bike-insurance-made-easy" target="_blank" rel="noopener" class="case-link-btn">
-                                <span>Xem blog Qover Case Study</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <span>Xem blog Qover Case Study</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </div>
 
@@ -1339,7 +1370,8 @@
                                 <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 8px;">Tỷ lệ Attach Rate (tỷ lệ người dùng mua kèm bảo hiểm) tăng 6 lần post-Covid và có case tăng <strong>1200%</strong> nhờ cá nhân hóa ưu đãi bằng AI.</p>
                             </div>
                             <a href="https://covergenius.com/resources/blog/coronavirus-case-study/" target="_blank" rel="noopener" class="case-link-btn">
-                                <span>Xem báo cáo Cover Genius</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <span>Xem báo cáo Cover Genius</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </div>
 
@@ -1354,13 +1386,17 @@
                                 <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 8px;">45% khách hàng ngân hàng truyền thống và <strong>70% khách hàng Digital Bank</strong> thể hiện sự quan tâm cao đến ưu đãi bảo hiểm nhúng trực tiếp trong ứng dụng.</p>
                             </div>
                             <a href="https://covergenius.com/resources/reports/embedded-insurance-report-us/" target="_blank" rel="noopener" class="case-link-btn">
-                                <span>Xem báo cáo PYMNTS Survey</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <span>Xem báo cáo PYMNTS Survey</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                         </div>
                     </div>
 
                     <!-- BẢNG 3 KỊCH BẢN CONVERSION RATE -->
-                    <h3 style="margin: 32px 0 16px 0;"><i class="fa-regular fa-sliders"></i> Đề Xuất 3 Kịch Bản Chuyển Đổi Trong Kế Hoạch Tài Chính</h3>
+                    <h3 style="margin: 32px 0 16px 0; display: flex; align-items: center; gap: 8px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
+                        Đề Xuất 3 Kịch Bản Chuyển Đổi Trong Kế Hoạch Tài Chính
+                    </h3>
                     
                     <div class="table-responsive">
                         <table class="custom-table">
@@ -1392,13 +1428,19 @@
                     </div>
 
                     <div class="callout-box gold" style="margin-top: 20px;">
-                        <h4><i class="fa-regular fa-comment-dots"></i> Câu Nói Trình Bày Chuẩn Với Cổ Đông & Đối Tác:</h4>
+                        <h4>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            Câu Nói Trình Bày Chuẩn Với Cổ Đông & Đối Tác:
+                        </h4>
                         <p style="font-size: 1.02rem; font-style: italic; color: #92400e; margin-bottom: 0;">"Tỷ lệ chuyển đổi mục tiêu ở giai đoạn tối ưu là 20-30% trên nhóm khách hàng được chọn lọc và có nhu cầu phù hợp. Trong kế hoạch tài chính thực tế, công ty đề xuất xây dựng theo ba kịch bản: Thận trọng 3-5%, Cơ sở 8-15%, và Tích cực 20-30%."</p>
                     </div>
 
                     <!-- INTERACTIVE CONVERSION SIMULATOR -->
                     <div class="simulator-box">
-                        <h3 style="margin-bottom: 6px;"><i class="fa-regular fa-keyboard"></i> Công Cụ Tính Thử Kịch Bản Chuyển Đổi & Doanh Thu</h3>
+                        <h3 style="margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+                            Công Cụ Tính Thử Kịch Bản Chuyển Đổi & Doanh Thu
+                        </h3>
                         <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">Nhập quy mô tệp khách hàng tiếp cận và phí bảo hiểm trung bình/đơn để xem mô phỏng kết quả:</p>
                         
                         <div class="sim-inputs">
@@ -1451,22 +1493,25 @@
                     <div class="grid-2">
                         <!-- Chi phí lương -->
                         <div class="glass-card" style="background: var(--bg-card-subtle);">
-                            <h3 style="color: var(--primary-light); margin-bottom: 14px;"><i class="fa-regular fa-user"></i> 1. Chi Phí Nhân Sự / Lương</h3>
+                            <h3 style="color: var(--primary-light); margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                                1. Chi Phí Nhân Sự / Lương
+                            </h3>
                             <ul class="duty-list">
                                 <li>
-                                    <i class="fa-regular fa-circle-check"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                                     <div><strong>Bộ phận Công nghệ:</strong> 120 triệu VNĐ / tháng.</div>
                                 </li>
                                 <li>
-                                    <i class="fa-regular fa-circle-check"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                                     <div><strong>Bộ phận Vận hành:</strong> 40 triệu VNĐ / tháng.<br><small style="color: var(--text-muted);">Giai đoạn đầu tận dụng nguồn lực từ ibaohiem, phấn đấu đưa chi phí vận hành xuống <strong>dưới 20 triệu VNĐ / tháng</strong>.</small></div>
                                 </li>
                                 <li>
-                                    <i class="fa-regular fa-circle-check"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                                     <div><strong>Ban Điều hành:</strong> Nhân sự làm trực tiếp.<br><small style="color: var(--text-muted);">- Nhận lương khi bắt đầu phát sinh doanh thu.<br>- Khi doanh thu lũy kế đạt từ <strong>50 tỷ</strong>: nhận từ 20 triệu/người/tháng.<br>- Khi doanh thu lũy kế đạt từ <strong>300 tỷ</strong>: nâng lên 50 triệu/người/tháng.</small></div>
                                 </li>
                                 <li>
-                                    <i class="fa-regular fa-circle-check"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                                     <div><strong>Lương nhân sự khác:</strong> Khi doanh thu quy mô lớn sẽ cân đối trong định mức <strong>1% doanh thu phí thu hộ</strong>.</div>
                                 </li>
                             </ul>
@@ -1474,18 +1519,21 @@
 
                         <!-- Chi phí cố định -->
                         <div class="glass-card" style="background: var(--bg-card-subtle);">
-                            <h3 style="color: var(--accent-gold); margin-bottom: 14px;"><i class="fa-regular fa-building"></i> 2. Chi Phí Cố Định Hàng Tháng</h3>
+                            <h3 style="color: var(--accent-gold); margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M9 9h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
+                                2. Chi Phí Cố Định Hàng Tháng
+                            </h3>
                             <ul class="duty-list">
                                 <li>
-                                    <i class="fa-regular fa-circle-check"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                                     <div><strong>Văn phòng, điện nước, hạ tầng:</strong> 30 triệu VNĐ / tháng.</div>
                                 </li>
                                 <li>
-                                    <i class="fa-regular fa-circle-check"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                                     <div><strong>Kê khai thuế & Kế toán nghiệp vụ:</strong> 10 triệu VNĐ / tháng.</div>
                                 </li>
                                 <li>
-                                    <i class="fa-regular fa-circle-check"></i>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                                     <div><strong>Văn phòng phẩm & chi phí khác:</strong> 3 triệu VNĐ / tháng (giai đoạn đầu).</div>
                                 </li>
                             </ul>
@@ -1501,7 +1549,10 @@
 
                     <!-- MỤC TIÊU KIỂM SOÁT CHI PHÍ -->
                     <div class="callout-box" style="margin-top: 20px;">
-                        <h4><i class="fa-regular fa-compass"></i> Nguyên Tắc Quản Trị Chi Phí Theo Doanh Thu Quy Mô</h4>
+                        <h4>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                            Nguyên Tắc Quản Trị Chi Phí Theo Doanh Thu Quy Mô
+                        </h4>
                         <p style="font-size: 1.02rem; margin-bottom: 0;">Khi doanh thu phí thu hộ đạt trên <strong>35 tỷ VNĐ / tháng</strong>, mục tiêu cốt lõi của công ty là kiểm soát chặt chẽ để tổng chi phí vận hành (OpEx) không vượt quá <strong>1% tổng doanh thu phí thu hộ</strong>.</p>
                     </div>
                 </div>
@@ -1570,47 +1621,59 @@
                     <p style="margin-bottom: 20px;">Giai đoạn đầu công ty ưu tiên tập trung vào các dòng sản phẩm đơn giản, dễ hiểu, quy trình phát hành nhanh và gắn liền với hành vi mua sắm số của khách hàng ngân hàng.</p>
 
                     <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px;">
-                        <span class="badge"><i class="fa-regular fa-bookmark"></i> Phí thấp, dễ mua</span>
-                        <span class="badge badge-green"><i class="fa-regular fa-bolt"></i> Phát hành tức thì</span>
-                        <span class="badge badge-gold"><i class="fa-regular fa-shield-halved"></i> Không thẩm định phức tạp</span>
-                        <span class="badge"><i class="fa-regular fa-rotate"></i> Bán lặp lại quy mô lớn</span>
+                        <span class="badge">Phí thấp, dễ mua</span>
+                        <span class="badge badge-green">Phát hành tức thì</span>
+                        <span class="badge badge-gold">Không thẩm định phức tạp</span>
+                        <span class="badge">Bán lặp lại quy mô lớn</span>
                     </div>
 
                     <h3 style="margin-bottom: 16px;">6 Nhóm Sản Phẩm Nhúng Ưu Tiên:</h3>
 
                     <div class="grid-3">
                         <div class="product-card">
-                            <div class="product-icon"><i class="fa-regular fa-file-lines"></i></div>
+                            <div class="product-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                            </div>
                             <h4>1. BH Khoản Vay</h4>
                             <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 6px;">Bảo vệ dư nợ tín dụng giải ngân cá nhân và tín chấp.</p>
                         </div>
 
                         <div class="product-card">
-                            <div class="product-icon" style="color: #047857; background: var(--accent-emerald-light);"><i class="fa-regular fa-heart"></i></div>
+                            <div class="product-icon" style="color: #047857; background: var(--accent-emerald-light);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </div>
                             <h4>2. BH Tai Nạn Cá Nhân</h4>
                             <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 6px;">Gói bảo vệ ngắn hạn và hàng năm mức phí linh hoạt.</p>
                         </div>
 
                         <div class="product-card">
-                            <div class="product-icon" style="color: #b45309; background: var(--accent-gold-light);"><i class="fa-regular fa-hospital"></i></div>
+                            <div class="product-icon" style="color: #b45309; background: var(--accent-gold-light);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            </div>
                             <h4>3. BH Sức Khỏe Cơ Bản</h4>
                             <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 6px;">Quyền lợi trợ cấp nằm viện và chi phí y tế đơn giản.</p>
                         </div>
 
                         <div class="product-card">
-                            <div class="product-icon" style="color: #0369a1; background: #e0f2fe;"><i class="fa-regular fa-credit-card"></i></div>
+                            <div class="product-icon" style="color: #0369a1; background: #e0f2fe;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            </div>
                             <h4>4. BH Giao Dịch / Thanh Toán</h4>
                             <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 6px;">Bảo vệ rủi ro mất tiền chuyển khoản và giao dịch online.</p>
                         </div>
 
                         <div class="product-card">
-                            <div class="product-icon"><i class="fa-regular fa-store"></i></div>
+                            <div class="product-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M10 12h4"/></svg>
+                            </div>
                             <h4>5. BH Cho Khách Hàng SME</h4>
                             <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 6px;">Gói tài sản & trách nhiệm bảo vệ doanh nghiệp nhỏ.</p>
                         </div>
 
                         <div class="product-card">
-                            <div class="product-icon" style="color: #047857; background: var(--accent-emerald-light);"><i class="fa-regular fa-id-card"></i></div>
+                            <div class="product-icon" style="color: #047857; background: var(--accent-emerald-light);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"/><path d="M4 6v12c0 1.1.9 2 2 2h14v-4"/><path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z"/></svg>
+                            </div>
                             <h4>6. BH Gắn Với Thẻ / Tài Khoản</h4>
                             <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 6px;">Tự động bảo vệ đi kèm tài khoản thanh toán / thẻ credit.</p>
                         </div>
@@ -1630,29 +1693,38 @@
 
                     <div class="grid-3" style="margin: 20px 0;">
                         <div class="sim-res-card" style="background: #ffffff; border-color: var(--border-color);">
-                            <i class="fa-regular fa-handshake" style="font-size: 1.5rem; color: var(--primary-light); margin-bottom: 8px;"></i>
+                            <div style="margin-bottom: 8px; color: var(--primary-light);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l4.3-4.3a2 2 0 0 0 0-2.8l-3.2-3.2a2 2 0 0 0-2.8 0L9 11"/><path d="m14 14-2.5 2.5a1 1 0 0 1-1.4 0l-4.3-4.3a2 2 0 0 1 0-2.8l3.2-3.2a2 2 0 0 1 2.8 0L14 8"/></svg>
+                            </div>
                             <h4 style="font-size: 0.95rem;">Quan Hệ Đối Tác</h4>
                             <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; margin-bottom: 0;">Ngân hàng & Cty Bảo hiểm</p>
                         </div>
                         <div class="sim-res-card" style="background: #ffffff; border-color: var(--border-color);">
-                            <i class="fa-regular fa-folder-tree" style="font-size: 1.5rem; color: var(--accent-emerald); margin-bottom: 8px;"></i>
+                            <div style="margin-bottom: 8px; color: var(--accent-emerald);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg>
+                            </div>
                             <h4 style="font-size: 0.95rem;">Công Nghệ Tích Hợp</h4>
                             <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; margin-bottom: 0;">API Nhúng & Tự động hóa</p>
                         </div>
                         <div class="sim-res-card" style="background: #ffffff; border-color: var(--border-color);">
-                            <i class="fa-regular fa-paste" style="font-size: 1.5rem; color: var(--accent-gold); margin-bottom: 8px;"></i>
+                            <div style="margin-bottom: 8px; color: var(--accent-gold);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                            </div>
                             <h4 style="font-size: 0.95rem;">Vận Hành Nghiệp Vụ</h4>
                             <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; margin-bottom: 0;">TPA & Xử lý bồi thường</p>
                         </div>
                     </div>
 
                     <!-- TÓM TẮT KHUYẾN NGHỊ CHIẾN LƯỢC CĂN ĐỀU ĐẸP -->
-                    <h3 style="margin-top: 28px; margin-bottom: 12px;"><i class="fa-regular fa-lightbulb"></i> Tóm Tắt Khuyến Nghị Chiến Lược</h3>
+                    <h3 style="margin-top: 28px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1.3.5 2.6 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+                        Tóm Tắt Khuyến Nghị Chiến Lược
+                    </h3>
                     
                     <div class="rec-grid">
                         <div class="rec-card">
                             <div class="rec-header">
-                                <i class="fa-regular fa-chart-line"></i>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
                                 <span>1. Về Tỷ Lệ Chuyển Đổi</span>
                             </div>
                             <div class="rec-body">
@@ -1662,7 +1734,7 @@
 
                         <div class="rec-card emerald">
                             <div class="rec-header">
-                                <i class="fa-regular fa-building"></i>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
                                 <span>2. Về Bộ Máy & Chi Phí</span>
                             </div>
                             <div class="rec-body">
@@ -1672,7 +1744,7 @@
 
                         <div class="rec-card gold">
                             <div class="rec-header">
-                                <i class="fa-regular fa-calendar-check"></i>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
                                 <span>3. Về Lộ Trình Triển Khai</span>
                             </div>
                             <div class="rec-body">
@@ -1683,10 +1755,12 @@
 
                     <div style="display: flex; justify-content: center; gap: 16px; margin-top: 32px;">
                         <button class="btn btn-primary" onclick="window.print()">
-                            <i class="fa-regular fa-file-pdf"></i> In / Xuất PDF Đề Án
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                            <span>In / Xuất PDF Đề Án</span>
                         </button>
                         <a href="#sec-1" class="btn btn-outline">
-                            <i class="fa-regular fa-circle-up"></i> Về Đầu Trang
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+                            <span>Về Đầu Trang</span>
                         </a>
                     </div>
                 </div>
